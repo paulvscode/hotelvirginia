@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  php-fpm:
+    build:
+      context: ./php-fpm
+
+  nginx:
+    build:
+      context: ./nginx
+
+  database:
+    build:
+      context: ./database
+    environment:
+      - MYSQL_DATABASE=mydb
+      - MYSQL_USER=myuser
+      - MYSQL_PASSWORD=secret
+      - MYSQL_ROOT_PASSWORD=docker
