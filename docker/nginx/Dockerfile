@@ -1,5 +1,5 @@
 # nginx
-FROM nginx:alpine
+FROM nginx:latest
 
 CMD ["nginx"]
 

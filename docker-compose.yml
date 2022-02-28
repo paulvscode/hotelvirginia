@@ -8,6 +8,11 @@ services:
   nginx:
     build:
       context: ./nginx
+    volumes:
+      - ../src:/var/www
+    ports:
+      - "80:80"
+      - "443:443"
 
   database:
     build:
